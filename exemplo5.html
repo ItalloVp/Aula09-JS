@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento 2</title>~
+    <style>
+        #content {
+            background-color: cadetblue;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            text-align: center;
+            font-family: Tahoma; 
+        }
+
+        .btn {
+            background-color: black;
+            color: aliceblue;
+            border: none;
+            padding: 10px;
+            width: 80px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id='content'>
+        <h2>Você quer namorar comigo?</h2>
+        <button class="btn" id="sim">SIM!</button>
+        <button class="btn" id="nao">NÃO!</button>
+    </div>
+
+
+    <script>
+        const btnSim = document.querySelector('#sim')
+        btnSim.addEventListener('click', () => {
+            alert("Estamos namorando, meu amor!!!! :) ")
+            window.location = 'https://www.bing.com/videos/search?q=perfect%20ed%20sheeran%20videos&FORM=VIRE0&mid=33C9A24725D955F85AE433C9A24725D955F85AE4&view=detail&ru=%2Fsearch%3Fq%3Dperfect%20ed%20sheeran'
+        })
+
+        function gerarPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%"
+          }
+        const btnNao = document.querySelector('#nao')
+        btnNao.addEventListener('mouseover', () => {
+             btnNao.style.position = 'absolute'
+            btnNao.style.botton = gerarPosicao (10, 90)
+            btnNao.style. left = gerarPosicao(10,90)
+        })
+           
+
+      
+    </script>
+
+
+</body>
+</html>

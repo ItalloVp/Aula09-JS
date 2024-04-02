@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Elementos</title>
+</head>
+<body>
+    <h1>Lista de tarefas - Simples </h1>
+    <label>Nome da tarefa: </label>
+    <input type="text" id="task"> <br>
+    <button onclick="addTarefa()">Adicionar</button>
+
+    <hr> <h2>Suas tarefas</h2>
+    <ul id="tasks"></ul>
+
+    <script>
+        function addTarefa(){
+            const task = document.querySelector('#task')
+            //como criar um elemento
+            const item = document.createElement('li')
+            item.innerText = task.value
+            const ul = document.querySelector('#tasks')
+            //Como adicionar um elemento a outro
+            ul.append(item)
+            alert('Task adicionada com sucesso!')
+            task.value = ''
+            task.focus() 
+        }
+    </script>
+</body>
+</html>
